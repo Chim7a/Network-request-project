@@ -7,23 +7,25 @@
   </head>
   <body>
     <section class="weather-container">
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
       <div class="weather-details">
-        <h1>My Weather Apps</h1>
-        <h3>Temperature</h3>
-        <h3>Description</h3>
-        <h3>Location</h3>
+        <h1>Enter a <span>City</span></h1>
       </div>
       <form>
-        <input
-          id="input-value"
-          placeholder="Enter your City"
-          class="input"
-          name="city"
-          type="text"
-        />
+        <input id="input-value" class="input" name="city" type="text" />
         <button class="button">Enter City</button>
       </form>
     </section>
+    <!-- <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/dotenv@16.4.5/lib/main.min.js"
+    ></script> -->
     <script src="index.js"></script>
   </body>
 </html>

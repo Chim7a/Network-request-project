@@ -1,4 +1,4 @@
-import dotenv from "dotenv/config";
+import "dotenv/config";
 import express from "express";
 import fs from "fs";
 
@@ -11,6 +11,11 @@ app.use(express.static("views"));
 app.get("/", (req, res) => {
   const Weather_Homepage = fs.readFileSync("views/index.html", "utf-8");
   res.status(200).send(Weather_Homepage);
+});
+// connect to dotenv
+app.get("/private_key", (req, res) => {
+  const private_key = process.env.WEATHER_API;
+  res.status(200).json({ key: private_key });
 });
 
 // Running server
